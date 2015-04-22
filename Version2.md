@@ -1,4 +1,4 @@
-# Gitting Some Work Done
+# Gitting Work Done
 
 This piece examines some essential git commands. Some basic terminology will be provided for those who are not familiar with git syntax. Below every definition, is the git command used to complete the task.
 
