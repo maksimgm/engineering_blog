@@ -1,8 +1,6 @@
-## What are branches?
+## What is a branch?
 
-A branch is an independent line of development, separate from the master branch. 
-
-Before switching branches, make sure your **Working Directory** is clean. 
+A branch is an independent line of development, separate from the master branch.
 
 ####**List of branch commands**
 
@@ -12,7 +10,7 @@ Before switching branches, make sure your **Working Directory** is clean.
 	
 *Compare branches*
 
-	$ git diff master..other_branchs
+	$ git diff master..other_branch
 
 *Create a new branch*
 	
@@ -21,6 +19,8 @@ Before switching branches, make sure your **Working Directory** is clean.
 *Switch branches*
 
 	$ git checkout 'branch_name'
+	
+	Make sure your Working Directory is clean, before switching branches.
 	
 *Create and switch into a new branch, simultaneously*
 	
@@ -36,9 +36,9 @@ Before switching branches, make sure your **Working Directory** is clean.
 
 ## Why are branches vital?
 
-Branches are cheap-- they are easy to create and delete; which makes them easy to work with. They are the most powerful feature on git, because they allow you to collaborate on a project without making unnecessary changes to the Master branch. 
+Branches are cheap-- they are easy to create and delete; which makes them easy to work with. They are a powerful feature on git, because they allow you to collaborate on projects without making unnecessary changes to the Master branch. 
 
-Other collaborators can view those changes, makes comments, and commit additional changes to the branch. When the work is complete, the branch is merged with master.
+Furthermore, collaborators can view your changes, makes comments, and commit additional changes to the branch. Once the work is finished, the branch is merged with master.
 
 ## What is merging?
 
@@ -54,7 +54,7 @@ According to [git-scm.com](http://git-scm.com/docs/git-merge), merging joins two
 
 		$ git merge file_one
 		
-Merges can get complicated. To avoid complications, run `$ git merge` with a clean **Working Directory**.
+	Merges can get complicated. To avoid 	complications, run `$ git merge` with a clean **Working Directory**.
 
 ## Merge Conflicts
 
@@ -80,13 +80,13 @@ According to [git-scm](http://git-scm.com/book/en/v2/Git-Branching-Basic-Branchi
 	* `$ git merge file_name` 
 	
 3. Use Merge Tool
-	`$ git merge tool`
+	* `$ git merge tool`
 	
-	* This method helps you resolve merge conflicts, but manua editing may be required afterwards. The downside is, you become too confortable with this command, and lack the appropriate knowledge to resove merge conflicts manually.
+	* This method helps you resolve merge conflicts, but manual editing may be required afterwards. The downside is, you become too confortable with this command, and lack the appropriate knowledge necessary to resove merge conflicts manually.
 
 #### Understanding Merge Conflict Syntax
 
-Git will makes changes to your file, in order to show you where the conflict occured. [Stack Overflow](http://stackoverflow.com/questions/9207260/merge-conflict-resolution), provides a perfect guide for reading git merge syntax:
+Git will makes changes to your file, in order to show you where the conflict occured. [Stack Overflow](http://stackoverflow.com/questions/9207260/merge-conflict-resolution), provides a guide for reading git merge syntax:
 
 1. The part between `<<<<<<` and `======` comes fromt the `HEAD` revision, which is the committed state prior to the merge operation.
 2. The part between `======` and `>>>>>>` comes from the verion being merged.
