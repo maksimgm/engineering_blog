@@ -13,7 +13,7 @@ Once you've located the repository on GitHub, clone it to your local machine. e.
 
 	$ git clone <remote repository URL>
 	
-This command will clone the repo from GitHub onto your local git repo.
+This command will clone the repo onto your local machine.
 
 ### Step 2
 
@@ -21,23 +21,23 @@ Now that we have a copy of the *cookies* repo, we will create a branch called, *
 
 	$ git checkout -b sidebar
 	
-Branches are created in order to make changes to a file without merging those changes into **Master** branch. Changes should only be merged into the **Master** branch once they are final.
+Branches are created in order to make changes to files without merging those changes into **Master** branch. Changes should only be merged into **Master** branch once they have been reviewed and approved by a senior developer.
 
 Once you're satisfied with your changes, move the file from the **Working Directory** to the **Staging Index** e.g.
 
-	$ git add cake.html
+	$ git add snickerdoodle.html
 	
-	Note: cake.html is a file, in our sidebar branch, in the cookies repository.
+	Note: snickerdoodle.html is a file, in our sidebar branch, in the cookies repository.
 	
 ### Step 3
 
-Move *cake.html*, from the **Staging Index** to the **Git Repository**, on your local machine. e.g.
+Move *snickerdoodle.html*, from the **Staging Index** to the **Git Repository**, on your local machine. e.g.
 	
 	$ git commit -m "commit message"
 	
 ### Step 4
 
-Now that *cake.html* is in **Git Repository**, we will push the changes to *sidebar branch*,  in the *cookies repo* on GitHub.
+Now that *snickerdoodle.html* is in **Git Repository**, we will push the changes to *sidebar branch*,  in the *cookies repo* on GitHub.
 
 	$ git push origin sidebar
 	
@@ -49,11 +49,11 @@ According to [OSSWATCH](http://oss-watch.ac.uk/resources/pullrequest), a pull re
 
 ### Performing a Pull Request
 
-1. Navigate to the page with the GitHub repo. 
+1. Navigate to the repo on GitHub. 
 2. On the left side of the page you will see a green button with two arrows. Click on it. 
 3. Make sure your base is **Master** and compare is **sidebar**. Click _create pull request_
-4. Enter the title of the request and leave a comment. Make sure to tag the individual who will approve the pull request using , _@_ followed by their GitHub username.
+4. Enter the title of the request and leave a comment. Make sure to tag the people who you'd like to be notified of the pull request using , _@_ followed by their GitHub username.
 
 ### Conclusion
 
-This information sounds confusing at first. However, if you follow the steps provided, you will have no problem getting through the git workflow. Remember to run, `git branch` and `git status` often. This way you do not get lost. Plus, it is a good habit to get into, in order to avoid technical errors.
+This information sounds confusing at first. However, if you follow the steps provided, you will have no problem getting through the git workflow. Remember, the point of pull requests is to formalize the collaborative process, and allow other decelopers to review your code before it is merged into **Master**. Since line comments are available in pull requests, developers can have a conversation about the code, then make changes, in light of such converations, commiit new solutions, then discuss those as well.
