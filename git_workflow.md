@@ -50,7 +50,7 @@ According to [OSSWATCH](http://oss-watch.ac.uk/resources/pullrequest), a pull re
 ### Performing a Pull Request
 
 1. Navigate to the page with the GitHub repo. 
-2. On the left side of the page you will see a green button with two arrows. Click on it. **insert screenshot**
+2. On the left side of the page you will see a green button with two arrows. Click on it. 
 3. Make sure your base is **Master** and compare is **sidebar**. Click _create pull request_
 4. Enter the title of the request and leave a comment. Make sure to tag the individual who will approve the pull request using , _@_ followed by their GitHub username.
 
