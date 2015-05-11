@@ -3,13 +3,13 @@ The Git Workflow
 
 ## Overview
 
-By now, you should have a good understanding of git commands, git architecture, and the difference between git and GitHub. It is time to put all of this together by taking you through the git workflow.
+By now, you should have a solid understanding of git commands, git architecture, and the difference between git and GitHub. It is time to put all of this together, by going through the git workflow.
 
-Imagine you are at work one day and your manager wants you to make changes to a repository on GitHub called, *cookies*. Here is are step-by-step instructions on how to do just that.
+Imagine, you are at work and your manager wants you to make changes to a repository on GitHub called, *cookies*. Below, are step-by-step instructions on how to do just that.
 
 ### Step 1
 
-Once you've found the repository on GitHub, clone it to your local machine. e.g.
+Once you've located the repository on GitHub, clone it to your local machine. e.g.
 
 	$ git clone <remote repository URL>
 	
