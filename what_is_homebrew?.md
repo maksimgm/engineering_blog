@@ -1,7 +1,7 @@
 Updating Your Git Using Homebrew
 ===
 
-An outdated version of Git can leave users vulnerable to security breaches, due to outdated software. That is why it is a good idea to update your Git.
+An outdated version of Git can leave users vulnerable to security breaches, due to outdated software. Therefore, it is a good idea to update your Git.
 
 #### Check your version of Git
 
