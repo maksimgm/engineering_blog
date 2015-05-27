@@ -20,7 +20,7 @@ Accessibility is important for four main reasons:
 
 1. Accessibility levels the playing field. It represents an important step toward autonomy for people with disabilities. A web developer should strive to make his website accessible to as many users as possible. Businesses are perceived as socially responsible for implementing such a policy. 
 
-2. Accessibility offers benefits for all. When following a universal design, it reduces the amount of time spent on maintenance and development. Additionally, accessible web pages are easier to read, easier to navigate, and faster to load. **Explain who "all" is. Describe the benefit for the user and developer**
+2. Accessibility offers benefits for all. When following a universal design the amount of time spent on maintenance and development is reduced. Additionally, accessible web pages are easier to read, easier to navigate, and faster to load for both the customer and developer.
 
 3. In many institutions and countries such as, the United States and Canada, legal mandates exist for accessibility. As a result, a new breed of developers are learning to implement accessibility standards, because of such policies. In the United States, Section 508 of the U.S. Rehabilitation Act sets standards for web pages designed or maintained by the federal government. Additionally universities such as, the University of Wisconsin at Madison implemented an accessibility policy requiring all pages published by the university to assent to the WCAG checkpoints. [Adobe](http://www.adobe.com/accessibility/gettingstarted.html)
 
