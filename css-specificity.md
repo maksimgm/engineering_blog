@@ -3,9 +3,9 @@ CSS Precedence
 
 ##### Intro
 
-CSS (Cascading Style Sheet), is a style sheet language of the internet. It   manipulates the deisgn and format of HTML. When I began learning CSS, it seemed like a very straight forward language, because of its ease in altering HTML. However, once I began replicating my first web page, it proved to be a challenge. I had no idea why my page was ignoring my CSS declarations. The challenge did not stem from my dearth of understanding how to write CSS source code. The challenge existed because I did not know CSS precedence. 
+CSS (Cascading Style Sheet), is the stylesheet language of the internet. It manipulates the deisgn and format of an HTML document. When I began learning CSS, it seemed like a very simple language, because of its easy syntax. However, once I began replicating web page, it proved to be an exasperating challenge. The challenge did not stem from my dearth of understanding CSS syntax. The challenge presisted because I did not know CSS precedence. 
 
-CSS precedence is simply the order of importance of certain selectors, their location in the style sheet, and their location int he HTML document. A better understanding of CSS precedence will lead to cleaner code and less vexation. Let's take a look at some factors which control CSS precedence:
+CSS precedence is simply, the order of importance of certain selectors, their location in the style sheet, and their location in the HTML document. A better understanding of CSS precedence will lead to cleaner code and less vexation. Let's take a look at the different factors that control CSS precedence:
 
 * Specificity of Elements
 * Internal style sheet v. External style v. Inline style
@@ -14,7 +14,7 @@ CSS precedence is simply the order of importance of certain selectors, their loc
 
 ##### Specificity of Elements
 
-Imagine you have an HTML document with id main-nav, and within that id you have an unordered list, with list elements e.g.
+Imagine you have an HTML document with id main-nav, and within that id you have an unordered list, with some list elements e.g.
 
 	<div id="main-nav">
 		<ul>
@@ -34,18 +34,18 @@ Now let's style these elements:
 		font-family: arial;
 	}
 
-As you may have noticed, there is a clear conflict between the font-family declarations. So, which one will CSS display on in our browser? CSS will display the more specific element. Since, `li` is nested inside of `ul`, arial will be displayed in our browser. 
+As you may have noticed, there is a clear conflict between the font-family declarations. So, which one will CSS display on in our browser? CSS will display the more specific declaration. Since, `li` is nested inside of `ul`, arial will be displayed in our browser. 
 
 The CSS standard follows the model that, more specific selectors take precedence over more general ones. Fortunatley, there is a specificity calculator to help us better understand this concept.
 
-Specificty is calculated by counting different components of our CSS and expressing them in a form, (a,b,c,d). This will become clearer with an example e.g.
+Specificty is calculated by counting the different components of your CSS and expressing them in a form, (a,b,c,d). This will become clearer with an example e.g.
 
 * Element, Pseudo Element: d = (0,0,0,1)
 * Class, Pseudo class, Attribute: c = (0,0,1,0)
 * Id: b = (0,1,0,0)
 * Inline Style: a = (1,0,0,0)
 
-Let's take at our first example and express its specificity using the calculator:
+Let's take a look at our first example and express its specificity using the calculator:
 
 	#main-nav ul{
 		font-family: sans-serif;
@@ -60,15 +60,15 @@ Let's take at our first example and express its specificity using the calculator
 	
 	Specificity value: (0,1,0,2)
 	
-As you can see the latter has a higher priority than the former.
+As you can see the latter has a higher priority than the former.mg
 
 ##### External, Internal, and Inline
 
-There are three ways of applying styles to your page, orginized from most general most specific: External style sheets, Internal style sheets, and Inline styling. 
+There are three ways of applying styles to your page, orginized from most general most specific: External stylesheets, Internal stylesheets, and Inline styling. 
 
 **External**
 
-External style sheets are the most common form of styling, and the cleanest. Each HTML document must include a reference to the external style sheet:
+External style sheets are the most common form of styling, and the cleanest. Every HTML document must include a reference to the external style sheet:
 
 HTML:
 
@@ -105,11 +105,11 @@ styleTwo.css
 		font-family: times;
 	}
 	
-In conclusion, the `font-family` of our page will be `times`, because it styleTwo.css succeeds style.css. Therefore, styleTwo.css is more specific.
+In conclusion, the `font-family` of our page will be `times`, because styleTwo.css succeeds style.css. Therefore, styleTwo.css is more specific.
 
 **Internal**
 
-Internal style sheets are typically used if one part of the page has a unique style, however it is not very common. They are defined with a `<style>` element inside of the head section of an HTML document [CSS How To...](http://www.w3schools.com/css/css_howto.asp):
+Internal stylesheets are typically used if one part of the page has a unique style, however it is not very common. They are defined with a `style` element inside of the head section of an HTML document [CSS How To...](http://www.w3schools.com/css/css_howto.asp):
 
 
 	<head>
@@ -138,7 +138,7 @@ In conclusion, **Inline** styling will override the other two forms of styling.
 
 ##### The Important tag
 
-An `!important` declaration provides the author of the stylesheet to give more value to a declaration than it naturally has. Here is a code example that will clearly demonstrate how `!important` declarations affect your style:
+An `!important` declaration provides the author the ability give more value to a declaration than it naturally has. Here is a code example that will clearly demonstrate how `!important` declarations affect your style:
 
 	#main-nav ul{
 		font-family: sans-serif !important;
@@ -170,4 +170,4 @@ The `!important` declaration to allow users with special needs to place an empha
 
 ##### Conclusion
 
-We've covered everything you need to know about CSS precedence, including, the specificity of elements, the specificty of different stylesheets/styles, and the `!important` declaration. Hopefully, this piece taught you about the importance of CSS precedence. Thus, resulting  in producing best stylesheet possible. 
+This piece covered everything you need to know about CSS precedence, including, the specificity of elements, the specificty of different stylesheets/styles, and the `!important` declaration. Hopefully, this piece taught you about the importance of CSS precedence. Thus, resulting  in producing best stylesheet possible. 
