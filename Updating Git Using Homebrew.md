@@ -3,6 +3,8 @@ Updating Your Git Using Homebrew
 
 An outdated version of Git leaves users vulnerable to security breaches. Therefore, it is a good idea to update your Git using Homebrew. Homebrew is an open source management system that simplifies the installation of software on Mac OS X. [Wikipedia](http://en.wikipedia.org/wiki/Homebrew_(package_management_software) In essence, Homebrew installs the stuff that Apple didn't.
 
+How to install Homebrew:
+
 #### Check your version of Git
 
 	$ git --version
@@ -13,7 +15,7 @@ If your terminal displays the following, then you are using Apple's Git:
 
 #### How to Update Git
 
-Install Homebrew by copying and pasting the following into your terminal window:
+Install Homebrew by copying and pasting the following code into your terminal window:
 
 	ruby -e "$(curl -fsSL https://	raw.githubusercontent.com/Homebrew/install/master/instal`l)"
 
@@ -33,6 +35,6 @@ Lastly, to update git in the future, all you need to do is run the following com
 
 	brew upgrade git
 	
-Note: If Git is up to date then your terminal will inform you that the lastest Git version is installed.
+Note: If Git is up to date then your terminal will inform you that the latest  Git version is installed.
 
-Hope this helps.
+Stay up to date and happy coding
