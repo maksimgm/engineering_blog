@@ -14,7 +14,7 @@ CSS precedence is, simply, the order of importance of certain selectors, their l
 
 ##### Specificity of Elements
 
-Imagine you have an HTML document with id main-nav, and within that id you have an unordered list, with some list elements e.g.
+Imagine you have an HTML document with `id` `main-nav`, and within that id you have an `unordered list`, with some list elements e.g.
 
 	<div id="main-nav">
 		<ul>
@@ -60,20 +60,21 @@ Let's take a look at our first example and express its specificity using the cal
 	
 	Specificity value: (0,1,0,2)
 	
-As you can see the latter has a higher priority than the former.mg
+As you can see the latter has a higher priority than the former.
 
 ##### External, Internal, and Inline
 
 There are three ways of applying styles to your page, organized from most general most specific: External style sheets, Internal stylesheets, and Inline styling. 
 
-**External**
+**External Style Sheet**
 
 External style sheets are the most common and cleanest  form of styling. Every HTML document must include a reference to the external style sheet:
 
 HTML:
 
 	<head>
-	<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" 
+		href="style.css">
 	</head>
 
 CSS:
@@ -89,8 +90,10 @@ Furthermore, if for some reason you have multiple style sheets, then the latter 
 HTML:
 
 	<head>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="stylesheet" type="text/css" href="styleTwo.css">
+		<link rel="stylesheet" type="text/css" 
+		href="style.css">
+		<link rel="stylesheet" type="text/css" 
+		href="styleTwo.css">
 	</head>
 
 style.css:
@@ -105,28 +108,28 @@ styleTwo.css
 		font-family: times;
 	}
 	
-In conclusion, the `font-family` of our page will be `times`, because styleTwo.css succeeds style.css. Therefore, styleTwo.css is more specific. 
+In conclusion, the `font-family` of our page will be `times`, because *styleTwo.css* succeeds style.css. Therefore, *styleTwo.css* is more specific. 
 
-**Internal**
+**Internal Style Sheet**
 
 Internal style sheets are typically used if one part of the page has a unique style, however it is not very common. They are defined with a `style` element inside of the head section of an HTML document [CSS How To...](http://www.w3schools.com/css/css_howto.asp):
 
 
 	<head>
-	<style>
-	#main-nav{
-		background: blue;
-	}
+		<style>
+			#main-nav{		
+				background: blue;
+			}
 	
-	li{
-		font-family: sans-serif;
-	}
-	</style>
+			li{
+				font-family: sans-serif;
+			}
+		</style>
 	</head>
 
 If we were to compare this example to the example in the **External** section then, this would take precedence. i.e. the `font-family` of our page would be `sans-serif` not arial, because and internal style sheet is more specific than an external style sheet.
 
-**Inline**
+**Inline Styles**
 
 An inline style is typically used to apply a unique style to a specific element on the page. This method of styling is very discouraged, because it mixes content with presentation, which leads to disorganized code. Use this method seldomly.
 
@@ -136,7 +139,7 @@ To use inline styles, add a style attribute to the relevant tag. The style attri
 	
 In conclusion, **Inline** styling will override the other two forms of styling.
 
-##### The Important tag
+##### The Important Tag
 
 An `!important` declaration provides the author the ability give more value to a declaration than it naturally has. Here is a code example that will clearly demonstrate how `!important` declarations affect your style:
 
@@ -148,9 +151,9 @@ An `!important` declaration provides the author the ability give more value to a
 		font-family: arial;
 	}
 
-As you may have guessed, the `font-family` of our list elements will be sans-serif, not arial, even though arial is more specific. The `!important` declaration partially disproves the specificity rules. I say partially, because if we insert an `!important` declaration into an **Inline** style element than it will still take precedence over the `!important` declaration in our **External** styles heet:
+As you may have guessed, the `font-family` of our list elements will be sans-serif, not arial, even though arial is more specific. The `!important` declaration partially disproves the specificity rules. I say partially, because if we insert an `!important` declaration into an **Inline** style element than it will still take precedence over the `!important` declaration in our **External** style sheet:
 
-*External*
+*External Stylesheet*
 	
 	#main-nav li{
 		font-family: sans-serif !important;
@@ -162,11 +165,11 @@ As you may have guessed, the `font-family` of our list elements will be sans-ser
 	
 As you may have guessed the `font-family` of our list element will be, times new roman, because an *Inline* style sheet takes precedence over an *External* style sheet.
 
-**When Should !important Declarations Be Used?**
+**When Should `!important` Declarations Be Used?**
 
-The`!important` declaration should **not be used unless they are absolutely necessary** after all other options have been exhausted. Do not be one of those individuals who use `!important` declarations out of laziness, to avoid debugging your code, or to rush through a project. This is a bad habit, because you are disrupting the natural flow of rules. The reason specificity exists in CSS is to make sure that certain elements take precedence over others. The `!important` declarations throws  those rules out of thee window, and allows the user to declare which elements are more important.
+The`!important` declaration should **not be used unless they are absolutely necessary** after all other options have been exhausted. Do not be one of those individuals who use `!important` declarations out of laziness, to avoid debugging your code, or to rush through a project. This is a bad habit, because you are disrupting the natural flow of rules. The reason specificity exists in CSS is to make sure that certain elements take precedence over others. The `!important` declarations throws  those rules out of the window, and allows the user to declare which elements are more important.
 
-The `!important` declaration to allow users with special needs to place an emphasis on a specific CSS rule that will aid their ability to access content. Additionally, the `!important` declaration can also be used to override urgent problems. However, this should only be a temporary fix, until a better solution is found.
+The `!important` declaration allows users with special needs to place emphasis on specific CSS syntax that will aid their ability to access content. Additionally, the `!important` declaration can also be used to override urgent problems. However, this should only be a temporary fix, until a better solution is found.
 
 ##### Conclusion
 
