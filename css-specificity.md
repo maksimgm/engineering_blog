@@ -151,7 +151,7 @@ An `!important` declaration provides the author the ability give more value to a
 		font-family: arial;
 	}
 
-As you may have guessed, the `font-family` of our list elements will be sans-serif, not arial, even though arial is more specific. The `!important` declaration partially disproves the specificity rules. I say partially, because if we insert an `!important` declaration into an **Inline** style element than it will still take precedence over the `!important` declaration in our **External** style sheet:
+As you may have guessed, the `font-family` of our list elements will be sans-serif, not arial, even though arial is more specific. The `!important` declaration partially disproves the specificity rules. I say partially, because if we insert an `!important` declaration into an **Inline** style element then it will still take precedence over the `!important` declaration in our **External** style sheet:
 
 *External Stylesheet*
 	
@@ -174,5 +174,3 @@ The `!important` declaration allows users with special needs to place emphasis o
 ##### Conclusion
 
 This piece covered everything you need to know about CSS precedence, including, the specificity of elements, the specificity of different style sheets/styles, and the `!important` declaration. Hopefully, this piece taught you about the importance of CSS precedence. Thus, resulting  in producing best style sheet possible. 
-
-
