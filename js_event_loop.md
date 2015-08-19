@@ -1,16 +1,17 @@
 The Javascript Event Loop
 ===
-######Intro
+####Intro
 
-An event loop, waits for and dispatches events in a  program. It is the link between your program and the operating system.
+Javascript is the universal scripting language which can be used to add interactivity to your webpage. However, JS is very deep and complex in the way that it operates *under the hood*. Understanding its complexities and functions will help any developer writer cleaner and more modularized code. This is where the event loop comes into play.
+The event loop, is a construct built into programs that controls and dispatches events. It is the link between your program and the operating system. The event loop is made up of 3 different data structures. i.e.
 
 
 
-The Call Stack- This data structure stores information about the active routines under the hood. This data structure is specific to function and executes in its operations using the LIFO method(last in first out).
+**The Call Stack**- This data structure stores information about the active routines under the hood. This data structure is specific to function and executes in its operations using the LIFO method(last in first out).
 
-The Heap- This data structure stores objects. When anything is declare it is stored in the heap. Since, everything in Javascript is an object, everything gets stored here as information
+**The Heap**- This data structure stores objects. When anything is declare it is stored in the heap. Since, everything in Javascript is an object, everything gets stored here as information
 
-The Queue- This data structure stores events that are meant to be executed at a later time; the most common  being timers. The stack must be empty for things to moved to the stack. The method used to executes thes objects, is FIFO(first in first out).
+**The Queue**- This data structure stores events that are meant to be executed at a later time; the most common  being timers. The stack must be empty for things to moved to the stack. The method used to executes these objects, is FIFO(first in first out).
 
 ![The Stack](https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRd8vnnxLXGD40oNqKPs7OYf0EuhHsFHKj0lnFN2rw_sfxPUdfPkQ)
 
@@ -45,7 +46,7 @@ setTimeout(sayHello, 10);
 sayHi();
 ```
 
-1.`setTimeout` gets sent to the heap, then is immediately stored in the queue. 
+1. `setTimeout` gets sent to the heap, then is immediately stored in the queue(after 10 milliseconds). 
 
 2. While `setTimeout` is in the queue, `sayHi();` is called, and is sent to the stack. This demonstrate the asynchronicity of javascript. under the hood, Javascript will not wait for other commands to execute. It will run as many commands as it can. 
 
@@ -70,10 +71,15 @@ goFirst();
 goThird();
 ```
 
-1. `setTimeout`is called and is sent to the heap, then immediatly to the queue,where it waits.
+1. `setTimeout`is called and is sent to the heap, then immediately to the queue(since it is set to 0),where it waits.
 
 2. `goFirst()` is called to the stack, where it `console.logs`, "I'm first". Then it pops off.
 
 3. `goSecond()` is called to the stack where it `console.logs`, "I'm third". Then it pops off.
 
 4. Once the stack is empty, `setTimeout` moves to the stack and `console.logs` "I'm next". Then it pops off. 
+
+
+#### Conclusion
+
+As you've observed, things do not work in the order which they appear in Javascript, since it is an asynchronous language. I only internalized the asynchronicity of JS when I learned the event loop and what happens *under the hood*. If you take anything away from this piece it should be the following, run your programs and understand why they work the way that they do. Understand what bits of code should be executed first and why. This goes back to understanding the event loop and its importance. Hope this helps. Good hunting!
