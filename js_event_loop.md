@@ -18,14 +18,16 @@ The event loop, is a construct built into programs that controls and dispatches 
 ###### Example 1
 ```
 function goodbye(){
-	return "Hello!"
+	console.log("Goodbye!"); 
 }
 
 function hello(){
-	return "Goodbye!"
+	console.log("Hello!");
 }
+
 hello();
 goodbye();
+
 ```
 1. `hello();` gets called and is sent to the stack. The function runs and `returns "Hello!"`.
 2. `hello();` gets popped off the stack.
@@ -46,11 +48,11 @@ setTimeout(sayHello, 10);
 sayHi();
 ```
 
-1. `setTimeout` gets sent to the heap, then is immediately stored in the queue (after 10 milliseconds). 
+1. `setTimeout` gets sent to the heap, then it is  stored in the queue (after 10 milliseconds).
 
 2. While `setTimeout` is in the queue, `sayHi();` is called and sent to the stack. This demonstrate the asynchronicity of javascript. under the hood, Javascript will not wait for other commands to execute. It will run as many commands as it can. 
 
-3. The `sayHello();` executes and returns "Hi...now!". Then it pops off the stack since it has nothing else to do. 
+3. `sayHello();` executes and returns "Hi...now!". Then it pops off the stack since it has nothing else to do. 
 
 4. Only, after, `sayHi();` is executed, the `setTimeout` moves from the queue to the stack and executes the `sayHello();` function. The stack must be empty before anything moves from the queue to the stack.
 
@@ -58,13 +60,13 @@ sayHi();
 ###### Example 3
 ```
 function goFirst(){
-console.log ("I'm first");
+	console.log ("I'm first");
 }
 
 setTimeout(function(){console.log("I'm next")},0)
 
 function goThird(){
-console.log ("I'm third");
+	console.log ("I'm third");
 }
 
 goFirst();
