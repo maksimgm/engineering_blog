@@ -2,11 +2,11 @@ Setting Up An Express Server
 ===
 #### Introduction
 
-This tutorial will demonstrate how to set up an Node server using Express. Node.js is an open source environment for developing server-side web applications. A couple things make Node.js easy to use: One, it is written in Javascript, so you will not need to learn an entirely new language to use Node. Two, node, when used in conjunction with npm, its package manager, which allows you to install in order external libraries and frameworks, such as Express.
+This tutorial will demonstrate how to set up an Node server using Express. Node.js is an open source environment for developing server-side web applications. A couple things make Node.js easy to use: One, it is written in Javascript, so you will not need to learn an entirely new language to use Node. Two, node, when used in conjunction with npm, its package manager, allows you to simply install and use external libraries and frameworks, such as Express.
 
 #### What is Express?
 
-Express is a Javascript framework that is designed for building web applicaitons. It is the de facto standard server  framework for Node.js. It is minimal and provides robust features for web and mobile applciations.
+Express is a Javascript framework that is designed for building web applicaitons. It is the de facto standard server framework for Node.js. It is minimal and provides robust features for web and mobile applciations.
 
 #### Putting Everything Together
 
