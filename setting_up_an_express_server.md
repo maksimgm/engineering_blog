@@ -2,27 +2,30 @@ Setting Up An Express Server
 ===
 #### Introduction
 
-This tutorial will demonstrate how to set up an Node server using Express. Node.js is an open source environment for developing server-side web applciations. A couple things make Node.js easy to use: One, it is written in Javascript, so you will not need to learn an entirely new language to use Node. Two, Node, is made up of packages which you install in order to use a technology in Node, such as Express.
+This tutorial will demonstrate how to set up a Node server using Express.  Node.js is an open source environment for developing server-side web applciations. A couple of things make Node.js easy to use: One, it is written in Javascript, so you won't need to learn an entirely new language. Two, when used in conjunction with npm, its package manager, allows you to simply install and use external libraries and frameworks, such as Express.
 
 #### What is Express?
 
-Express is a Javascript framework that is designed for building web applicaitons. It is the de facto standard server  framework for Node.js. It is minimal and provides robust features for web and mobile applciations.
+Express is a Javascript framework that is designed for building web applicaitons. It is the de facto standard server framework for Node.js. It is minimal and provides robust features for web and mobile applciations.
 
 #### Putting Everything Together
 
-Before you read any furthur make sure you have Node [installed on you computer.](https://nodejs.org/en/).
+Before you read any furthur make sure you have Node [installed](https://nodejs.org/en/) on you computer.
 
-Once, Node is installed, let's install some Node packages. NPM is a package manager for Javascript whihc is automatically installed with the Node environment. In order to access certain packages we will first inittalize npm in our environment
+Once, Node is installed, let's install some Node packages. NPM is a package manager for Javascript which is automatically installed with the Node environment. In order to access certain packages we will first initialize npm in our environment. i.e.
 
 	$ npm init
 
 Once that is complete we will install the following: Express, EJS, body-parser, method-override, and morgan. I will go into depth what these are in a second.
 
-The shorthand command for installing multiple packages in your terminal with one line is:
+The shorthand command for installing multiple packages in your terminal in one line is:
+
+	$ npm i -S <PACKAGE_NAMES>
+
+This command will install all 5 pacakage.	
 
 	$ npm i -S express ejs body-parser method-override morgan
-	
-This command will install all 5 pacakage. 
+ 
 
 Before getting into the details of these pacakge make sure to intialize your folder as a git repository if you plan on pushing to GitHub.
 
@@ -32,7 +35,7 @@ Furthermore, Node packages are very bulky, so if you push to GitHub make sure to
 
 	$ echo node_modules >> .gitignore
 	
-You may be wondering how people will be able to see our packages if they work with our code. Thankfully `npm init` adds a JSON file which lists all our your dependencies(packages), so if someone wants to see what packages you have installed they can easily do that.
+You may be wondering how people will be able to view our packages if they work with our code. Thankfully `npm init` adds a JSON file which lists all our your dependencies(packages), so if someone wants to see what packages you have installed they can easily do that.
 
 	{
 	  "name": "express_library",
@@ -116,4 +119,4 @@ In order to start your server, go to the folder where your file is and enter:
 	
 Now that your server is running you will be able to view your application in `http://localhost:3000/`.
 
-The strengths of Node.js as a technology is the fact that it is made up of node-modules whihc allow you to install a variety of packages, such as body-parser, Express, and Morgan. This makes the Node environment very flxible to work in. Particullary, for real-time applications Node.js is incredbily exciting  and I think we will see more application being built in Node. 
+The strengths of Node.js as a technology is the fact that it is made up of node-modules which allow you to install a variety of packages, such as body-parser, Express, and Morgan. This makes the Node environment very flexible to work in. Particularly, for real-time applications Node.js is incredibly exciting  and I think we will see more application being built in Node. Good hunting!
