@@ -1,7 +1,7 @@
 Blocks, Procs, Yields in Ruby
 ===
 
-Ruby is a synchronous object oriented language created in order to make writing code more efficient and readable. However, because Ruby is an synchronize language methods run in the order which they are written. On the contrary, Javascript is asynchronous ,which means things don't get executed in the order which they are written, hence the use of callback functions. THe great thing about Ruby is that it has the equivalent of callback functions even though it is synchronize. Blocks and yields are Rubys way of creating asynchronicity.
+Ruby is a synchronous object oriented language created in order to make writing code more efficient and readable. However, due to Ruby's  synchronicity, methods run in the order which they are written. Whereas, Javascript is asynchronous ,which means things don't get executed in the order which they are written, hence the use of callback functions. The great thing about Ruby is that it has the equivalent of callback functions even though it is synchronous. Blocks and yields are Rubys way of creating asynchronicity.
 
 #####Features of a block
 
