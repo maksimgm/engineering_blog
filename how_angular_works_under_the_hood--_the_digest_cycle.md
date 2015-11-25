@@ -1,7 +1,7 @@
 #How Angular works under the hood-- The digest cycle
 
 
-Software developers who work with Angular have their reasons for liking or disliking Angular. People who dislike working with Angular claim different points suporrting their opinion: Angular is to slow or it incorporates to much javascript in the html. Although, these points are valid, the beauty of Angular heavily outweighs its pitfalls. The beauty of Angular is that it two way data binds out of the box. This is ideal for single page applications and dynamic web applications. But, how does Angular do out of the box? Keep reading and you will find out.
+Angular developers have their reasons for liking or disliking the framework. Those who dislike it, claim the following: Angular is to slow or it incorporates to much javascript into the html. Although, these points are valid, the beauty of Angular heavily outweighs the pitfalls. It comes with two-way-data-binding out of the box. This is ideal for single page applications and dynamic web applications. But, how does happen under the hood? Keep reading and you will find out.
 
 ##$scope
 
