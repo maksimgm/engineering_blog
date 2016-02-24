@@ -66,7 +66,7 @@ Jasmine tests are primarilly made up of two parts; `describe` blocks and `it` bl
 	  	celsius",function(){
 		// Setup
 	    var fahrenheit = 100;
-    	var result = temp_converter.fahrenheit_to_celsius(fahrenheit);
+    	var result = fahrenheit_to_celsius(fahrenheit);
 	    // Checking the result
     	expect(result).toBeCloseTo(37.778,3);
 	  });
@@ -80,4 +80,17 @@ In your `jasmine_testing` directory, run the test and watch it fail. i.e.
 
 	$ jasmine
 	
-Next we will need to write the appropriate
+Next we will need to write the appropriate code to pass said test. Create an `app` directory for your script. Inside of it create and write your script there. The boiler plate should look something like this:
+
+	fahrenheit_to_celsius(fahrenheit){
+    	// take the fahrenheit and convert it to celsius
+	}
+	
+Run your test again in the `jasmine_testing` directory and watch it pass.
+
+##Conclusion
+There is tons more you can do with Jasmine which I did not descibe in the tutorial. I highly recommend you check out the [Jasmine website](http://jasmine.github.io/) and [GitHub](https://github.com/jasmine/jasmine).
+
+In conclusion, if you are not testing your JavaScript code, start now! It is an underrated practice which will result in cleaner code which is not buggy. Furthermore, Jasmine' is fast and simple syntax makes testing simple. So, take your development further write tests for your code. 
+
+Good hunting!
