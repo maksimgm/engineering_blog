@@ -29,6 +29,55 @@ BDD is a bit more complex, because it typically requires a team of developers, r
 
 * Automating said examples to provide rapid feedback and [regression testing](https://en.wikipedia.org/wiki/Regression_testing).
 
-##why?
+Before I plunge into Jasmine, let's understand some basic testing terminology:
 
-##how?
+**Unit testing**- Low level tests to check functionality of classes, methods, or functions. This is what I will be focusing on. Unit tests run fast.
+
+**Acceptance/Feature tests**- High level tests conducted to make sure all requirements are met. Acceptance tests run slow.
+
+**Integration/function/service-level testing**- Testing between unit and acceptance tests. In most cases this will involve testing RESTful APIs.
+
+![pyramid of types of tests](http://blog.codeclimate.com/images/posts/rails-testing-pyramid.png)
+
+
+##Installing Jasmine
+First, we will need to install the jasmine gem.
+
+	$ npm install -g jasmine
+
+Second, let's make sure it works, create a directory called, `jasmine_testing`, then type: 
+
+	$ jasmine init
+
+This will generate the following path in our `jasmine_testing` directory:
+
+	spec/support/jasmine/jasmine.json
+
+This file informs Jasmine where to find the tests and any helper files.
+
+Now that we've set up Jasmine, let's learn the syntax and write our first test.
+
+##Learning the syntax
+
+Jasmine tests are primarilly made up of two parts; `describe` blocks and `it` blocks. Let's take a look at how they work.
+
+	describe("fahrenheit_to_celsius_test",function(){
+	  it("converts 100 fahrenheit to 			
+	  	celsius",function(){
+		// Setup
+	    var fahrenheit = 100;
+    	var result = temp_converter.fahrenheit_to_celsius(fahrenheit);
+	    // Checking the result
+    	expect(result).toBeCloseTo(37.778,3);
+	  });
+	});
+	
+Both `describe` and `it` are functions that take two parameters: a text string and a function. The idea is to make the text string as humanly readable as possible. Notice that both the `describe` and the `it` block form sort of a sentence which gives the developer an idea of what that block tests.
+
+Think of the `describe` block as a general container and the `it` block as a place where you can set up the code nessecary to for your test. Once your `it` block is setup, you'll continue by writing the `expect` function. In this function you will pass in whatever code you are testing. Notice how in my example, I expect the result from the `temp_converter.fahrenheit_to_celsius` function to return a close to 37.778.
+
+In your `jasmine_testing` directory, run the test and watch it fail. i.e.
+
+	$ jasmine
+	
+Next we will need to write the appropriate
