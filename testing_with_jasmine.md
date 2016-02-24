@@ -1,6 +1,5 @@
 #JavaScript Testing With Jasmine
-
-Most software developer know that they should write tests for their code. However, nine times out of ten, they don't, because it means learning yet another concept. In this piece, I will walk you through testing with Jasmine.
+Most software developer know that they should be writing tests for their code. However, nine times out of ten, they won't, because it means learning yet another concept. In this piece, I will walk you through testing your JavaScript with Jasmine.
 
 Jasmine is an open source testing framework for JavaScript which aims to run on any JavaScript-enabled platform. It is heavilly influenced by other testing frameworks, such as [ScrewUnit](https://github.com/nkallen/screw-unit), [JSpec](https://github.com/liblime/jspec), and [RSpec](https://github.com/rspec/rspec).
 
@@ -8,7 +7,7 @@ Jasmine is an open source testing framework for JavaScript which aims to run on 
 Before I dive into BDD, let's understand some fundamentals about testing. 
 
 ### Test Driven Development
-TDD is the process of writing and running your test. Following TDD makes it possible ot have a high test coverage. Test coverage refers to the percentage of code that is tested, so the higher the better. Additionally TDD, reduces the likelihood of having bugs in your tests, which can otherwise be difficult to track down.
+TDD is the process of writing and running your test. Following TDD makes it possible to have a high test coverage. Test coverage refers to the percentage of code that is tested, so the higher the better. Additionally TDD, reduces the likelihood of having bugs in your tests, which can otherwise be difficult to track down.
 
 The process consists of the following steps:
 
@@ -51,7 +50,7 @@ Second, let's make sure it works, create a directory called, `jasmine_testing`, 
 
 This will generate the following path in our `jasmine_testing` directory:
 
-	spec/support/jasmine/jasmine.json
+	spec/support/jasmine.json
 
 This file informs Jasmine where to find the tests and any helper files.
 
@@ -74,7 +73,7 @@ Jasmine tests are primarilly made up of two parts; `describe` blocks and `it` bl
 	
 Both `describe` and `it` are functions that take two parameters: a text string and a function. The idea is to make the text string as humanly readable as possible. Notice that both the `describe` and the `it` block form sort of a sentence which gives the developer an idea of what that block tests.
 
-Think of the `describe` block as a general container and the `it` block as a place where you can set up the code nessecary to for your test. Once your `it` block is setup, you'll continue by writing the `expect` function. In this function you will pass in whatever code you are testing. Notice how in my example, I expect the result from the `temp_converter.fahrenheit_to_celsius` function to return a close to 37.778.
+Think of the `describe` block as a general container and the `it` block as a place where you can set up the code nessecary to for your test. Once your `it` block is setup, you'll continue by writing the `expect` function. In this function you will pass in whatever code you are testing. Notice how in my example, I expect the result from the `fahrenheit_to_celsius` function to return a close to 37.778.
 
 In your `jasmine_testing` directory, run the test and watch it fail. i.e.
 
