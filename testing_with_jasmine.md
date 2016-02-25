@@ -1,5 +1,5 @@
 #JavaScript Testing With Jasmine
-Most software developer know that they should be writing tests for their code. However, nine times out of ten, they won't, because it means learning yet another concept. In this piece, I will walk you through testing your JavaScript with Jasmine.
+Most software developers know that they should be writing tests for their code. However, more often than not they won't because it means learning yet another concept. In this piece, I will walk you through testing your JavaScript with Jasmine.
 
 Jasmine is an open source testing framework for JavaScript which aims to run on any JavaScript-enabled platform. It is heavilly influenced by other testing frameworks, such as [ScrewUnit](https://github.com/nkallen/screw-unit), [JSpec](https://github.com/liblime/jspec), and [RSpec](https://github.com/rspec/rspec).
 
@@ -7,7 +7,7 @@ Jasmine is an open source testing framework for JavaScript which aims to run on 
 Before I dive into BDD, let's understand some fundamentals about testing. 
 
 ### Test Driven Development
-TDD is the process of writing and running your test. Following TDD makes it possible to have a high test coverage. Test coverage refers to the percentage of code that is tested, so the higher the better. Additionally TDD, reduces the likelihood of having bugs in your tests, which can otherwise be difficult to track down.
+TDD is the process of writing and running your test. Following TDD makes it possible to have a high test coverage, or the percentage of code that is tested; the higher the coverage, the better. Additionally, TDD reduces the likelihood of having bugs in your tests, which can otherwise be difficult to track down.
 
 The process consists of the following steps:
 
@@ -20,9 +20,9 @@ The process consists of the following steps:
 
 Now that you understand the process of TDD, let's move on to BDD.
 
-BDD is a bit more complex, because it typically requires a team of developers, rather than a single developer, to practice it fully. Here are a few BDD practices:
+BDD is a bit more complex because it typically requires a team of developers, rather than a single developer, to practice it fully. Here are a few BDD practices:
 
-* Establishing goals of different stakeholders required for an idea to be implmented, and involving stakeholders in this implementation through outside-in software development.
+* Establishing goals of different stakeholders required for an idea to be implemented, and involving stakeholders in this implementation through outside-in software development.
 
 * Using examples to describe the behavior of different units of code
 
@@ -44,7 +44,7 @@ First, we will need to install the jasmine gem.
 
 	$ npm install -g jasmine
 
-Second, let's make sure it works, create a directory called, `jasmine_testing`, then type: 
+Second, to make sure it works, create a directory called, `jasmine_testing`, then type: 
 
 	$ jasmine init
 
@@ -58,7 +58,7 @@ Now that we've set up Jasmine, let's learn the syntax and write our first test.
 
 ##Learning the syntax
 
-Jasmine tests are primarilly made up of two parts; `describe` blocks and `it` blocks. Let's take a look at how they work.
+Jasmine tests are primarily made up of two parts: `describe` blocks and `it` blocks. Let's take a look at how they work.
 
 	describe("fahrenheit_to_celsius_test",function(){
 	  it("converts 100 fahrenheit to 			
@@ -73,7 +73,7 @@ Jasmine tests are primarilly made up of two parts; `describe` blocks and `it` bl
 	
 Both `describe` and `it` are functions that take two parameters: a text string and a function. The idea is to make the text string as humanly readable as possible. Notice that both the `describe` and the `it` block form sort of a sentence which gives the developer an idea of what that block tests.
 
-Think of the `describe` block as a general container and the `it` block as a place where you can set up the code nessecary to for your test. Once your `it` block is setup, you'll continue by writing the `expect` function. In this function you will pass in whatever code you are testing. Notice how in my example, I expect the result from the `fahrenheit_to_celsius` function to return a close to 37.778.
+Think of the `describe` block as a general container and the `it` block as a place where you can set up the code necessary to for your test. Once your `it` block is setup, you'll continue by writing the `expect` function. In this function you will pass in whatever code you are testing. Notice how in my example I expect the result from the `fahrenheit_to_celsius` function to return a close to 37.778.
 
 In your `jasmine_testing` directory, run the test and watch it fail. i.e.
 
@@ -88,8 +88,10 @@ Next we will need to write the appropriate code to pass said test. Create an `ap
 Run your test again in the `jasmine_testing` directory and watch it pass.
 
 ##Conclusion
-There is tons more you can do with Jasmine which I did not descibe in the tutorial. I highly recommend you check out the [Jasmine website](http://jasmine.github.io/) and [GitHub](https://github.com/jasmine/jasmine).
+There is tons more you can do with Jasmine which I did not describe in the tutorial. I highly recommend you check out the [Jasmine website](http://jasmine.github.io/) and [GitHub](https://github.com/jasmine/jasmine).
 
-In conclusion, if you are not testing your JavaScript code, start now! It is an underrated practice which will result in cleaner code which is not buggy. Furthermore, Jasmine' is fast and simple syntax makes testing simple. So, take your development further write tests for your code. 
+In conclusion, if you are not testing your JavaScript code, start now! It is an underrated practice which will result in cleaner and less buggy code. Furthermore, Jasmine's fast and simple syntax makes testing simple. So take your development further by writing tests for your code. 
 
 Good hunting!
+
+
