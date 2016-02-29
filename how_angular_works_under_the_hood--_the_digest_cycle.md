@@ -11,7 +11,7 @@ If you are familiar with Angular, you know that `$scope` is an object that refer
 
 ###$scope.$digest
 
-To go a level deeper, `$scope.digest` runs in the background and monitors which variables are getting changed that are being watched. What is being watched?This is referred to as the digest cycle or the digest loop. The method that is constantly called to update the to update data in the digest loop is `$digest`. We'll cover more about the digest cycle later in the article.
+To go a level deeper, `$scope.digest` runs in the background and monitors which variables are getting changed that are being watched. What is being watched? This is referred to as the digest cycle or the digest loop. The method that is constantly called to update the to update data in the digest loop is `$digest`. We'll cover more about the digest cycle later in the article.
 
 ###$scope.$apply
 
@@ -19,43 +19,41 @@ Sometimes we see that `$scope` data is not getting updated in our HTML file. Thi
 
 ## What is the difference between $scope.$digest and $scope.$apply?
 
-After reading the following you may be wonder what the difference between `$scope.apply` and `$scope.digest` is.  Below is  code as an example:
+You may be wondering what the difference between `$scope.apply` and `$scope.digest`. The code below should give you a better understanding. i.e.
 
-	<!DOCTYPE html>
-	<html lang="en" ng-app="applydigest">
+    <!DOCTYPE html>
+	<html lang="en" ng-app="sampleEx">
 	<head>
 	  <meta charset="UTF-8">
-	  <title>Document</title>
-	</head>
-	<body >
-	  <div>
-    From $rootScope: {{name}}
-	  </div>
-	  <div ng-controller="MainController">
-    	From $scope: {{age}}
-	  </div>
-	  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-	  <script src="script.js"></script>
-	</body>
-	</html>
--
-	
-	angular.module("applydigest",[]).controller("MainController", function($rootScope, $scope){
-	  $rootScope.name = "Fido"
-	  $scope.age = 3
+      <title>Document</title>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.min.js"></script>
+    </head>
+     <body>
+     <div ng-app="MyApp">
+    {{rootMessage}}
+     <div ng-controller="MyController">
+      {{childMessage}}
+     </div>
+     </div>
+     </body>
+    </html>
 
-	  // this is for example purposes
-	  // NOTE - there is a $timeout which handles $apply for you
-	  setTimeout(function(){
-	    $rootScope.name = "Lassie"
-	    $scope.age = 10
-	    // $scope.$digest()
-	    $scope.$apply()
-	  },1000)
-	})
+	<script>
+    angular.module("sampleEx",[]).controller("MyController", function($rootScope, $scope){
 
-When you call `$scope.digest` it only runs the digest loop from that  particular scope. However, when you call `$apply`, that uses the `$rootScope` and goes through all scopes in the application.
+    $rootScope.rootMessage = "This is the Root Message";
+    $scope.childMessage = "This is the Child Message";
 
+    setTimeout(function(){
+      $rootScope.rootMessage = "New Root Message";
+      $scope.childMessage = "New Child Message";
+
+      //$scope.$apply();
+    },1000);
+    });
+    </script>
+
+When you run the following code in your browser, you'll see `This is the Root Message` and `This is the Child Message`. However, if you call the apply function, the browser will display, `New Root Message` and `New Child Message`. In conclusion, when you call `$scope.$digest` it only runs the digest loop from that particular `$scope` and all of its children. However, when you call `$scope.$apply` that uses the `$rootScope` targets all of the `$scopes` in the application.
 
 ## How does Angular extend the browser?
 
